@@ -1,0 +1,45 @@
+- name: "I have No enemies"
+  date: "2 months ago"
+  rating: 5
+  text: "Great guy, cheap prices, would recommend to anyone trying to get their car fixed up."
+  assessment: "Price assessment"
+
+- name: "Bre’u McClinton"
+  date: "3 months ago"
+  rating: 5
+  text: "Ralph was very communicative and professional. He showed me what was wrong with my vehicle and walk me through the process and found the part that I needed. Very reliable and trustworthy. He was amazing."
+  services: "Transmission"
+  assessment: "Great price"
+  response: "Thank you, hope to do business with you again."
+
+- name: "Christopher Ruland"
+  date: "3 months ago"
+  rating: 5
+  text: "Ralph was friendly, helpful, and very professional. One of the most honest people I've met in the auto industry. Couldn't recommend more!"
+  services: "A/C installation & repair"
+  assessment: "Great price"
+  response: "Thank you, hope to do business with you again."
+
+- name: "Kurlyo"
+  date: "4 months ago"
+  rating: 5
+  text: "Ralph went above & beyond, job was resolved perfectly 🫡"
+  response: "Thank you for your review I really appreciate it"
+
+- name: "Sapphiyre"
+  date: "4 months ago"
+  rating: 5
+  text: "Ralph was amazing. He went above and beyond to find the part for my vehicle and had a hell of a time getting it, but he stayed strong with his promise and got my car up and running in no time. He gave an amazing price as well. I would definitely recommend contacting him for any automotive needs, and the best part about it was not having to leave my home. 10/10! I will be back if I ever need any work done again."
+  assessment: "Great price"
+  response: "Thank you, hope to do business with you again."
+
+- name: "Leslie Cruz"
+  date: "5 months ago"
+  rating: 5
+  text: ""
+  response: "Thank you for your business"
+
+- name: "Dianna Hackett"
+  date: "5 months ago"
+  rating: 5
+  text: "Ralph is an amazing mechanic. He has helped me out on several projects. He gets the job done in a reasonable amount of time. And the pricing is great. I won't go to no other. Thank you for all your help and services."
