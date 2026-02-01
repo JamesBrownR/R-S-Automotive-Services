@@ -1,1 +1,100 @@
+---
+layout: default
+---
 
+<section class="hero">
+    <div class="container">
+        <div>
+            <h1>Top Rated <br><span>Automotive Services</span></h1>
+            <p style="font-size: 1.2rem; margin-bottom: 30px; color: #ddd;">
+                Reliable Mechanics. Honest Pricing. Mobile Convenience.
+            </p>
+            <a href="tel:3522769636" class="btn">Get a Quote</a>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="container">
+    <h2 class="section-title">What We <span>Do</span></h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <i class="fas fa-cogs"></i>
+            <h4>Transmission & Engine</h4>
+            <p>Expert diagnostics and repairs for transmissions, engines, and major mechanical components.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-snowflake"></i>
+            <h4>A/C Repair</h4>
+            <p>Keep your cool with professional A/C installation and repair services.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-car-side"></i>
+            <h4>Mobile Detailing</h4>
+            <p>Professional detailing services that come to you. Keep your car looking brand new.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-wrench"></i>
+            <h4>General Repair</h4>
+            <p>From brake jobs to simple fixes, we handle it all with transparency and honesty.</p>
+        </div>
+    </div>
+</section>
+
+<section id="reviews" style="background: #0a0a0a; padding: 20px 0;">
+    <div class="container">
+        <h2 class="section-title">5.0 Star <span>Reputation</span></h2>
+        
+        <div style="text-align: center; margin-bottom: 40px;">
+            <span style="font-size: 2rem; font-weight: bold; color: white;">5.0</span>
+            <div class="stars" style="display: inline-block; font-size: 1.5rem;">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p style="color: #888;">Based on 7 Google Reviews</p>
+        </div>
+
+        <div class="reviews-container">
+            {% for review in site.data.reviews %}
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">
+                        {{ review.name | slice: 0 }}
+                    </div>
+                    <div>
+                        <strong style="display: block; color: white;">{{ review.name }}</strong>
+                        <span style="font-size: 0.8rem; color: #666;">{{ review.date }}</span>
+                    </div>
+                </div>
+                
+                <div class="stars">
+                    {% for i in (1..review.rating) %}
+                        <i class="fas fa-star"></i>
+                    {% endfor %}
+                </div>
+
+                {% if review.text != "" %}
+                    <p class="review-text">"{{ review.text }}"</p>
+                {% else %}
+                     <p class="review-text"><i>(Star rating only)</i></p>
+                {% endif %}
+
+                {% if review.services %}
+                    <p style="margin-top: 10px; font-size: 0.8rem; color: var(--primary-cyan);">
+                        <i class="fas fa-tools"></i> Service: {{ review.services }}
+                    </p>
+                {% endif %}
+
+                {% if review.response %}
+                    <div class="owner-response">
+                        <strong>Owner Response:</strong><br>
+                        {{ review.response }}
+                    </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="https://www.google.com/maps/place/R+%26+S+Automotive+Services/@28.809319,-81.730248,17z" target="_blank" class="btn">Read All Reviews on Google</a>
+        </div>
+    </div>
+</section>
