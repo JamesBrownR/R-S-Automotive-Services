@@ -1,1 +1,85 @@
+---
+layout: default
+---
 
+<section class="hero" style="height: 50vh;">
+    <div class="container">
+        <div>
+            <h1>Auto Repair <span>Tips & Insights</span></h1>
+            <p style="font-size: 1.2rem; margin-bottom: 30px; color: #ddd;">
+                Expert advice from Ralph to help you maintain your vehicle
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="container" style="padding: 60px 0;">
+    <div style="max-width: 1000px; margin: 0 auto;">
+        
+        {% if site.posts.size > 0 %}
+        <div style="display: grid; gap: 40px;">
+            {% for post in site.posts %}
+            <article style="background: var(--bg-card); border-radius: 10px; overflow: hidden; border: 1px solid #333; display: grid; grid-template-columns: 300px 1fr; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary-cyan)'" onmouseout="this.style.borderColor='#333'">
+                
+                {% if post.featured_image %}
+                <div style="height: 100%; min-height: 250px; background: url('{{ post.featured_image }}') center/cover;">
+                </div>
+                {% else %}
+                <div style="height: 100%; min-height: 250px; background: linear-gradient(135deg, var(--primary-cyan), var(--primary-purple)); display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-car" style="font-size: 4rem; color: rgba(255,255,255,0.3);"></i>
+                </div>
+                {% endif %}
+                
+                <div style="padding: 30px;">
+                    <div style="font-size: 0.85rem; color: var(--text-gray); margin-bottom: 10px;">
+                        <i class="fas fa-calendar"></i> {{ post.date | date: "%B %d, %Y" }}
+                        {% if post.category %}
+                        <span style="margin: 0 10px;">•</span>
+                        <i class="fas fa-folder"></i> {{ post.category }}
+                        {% endif %}
+                    </div>
+                    
+                    <h2 style="font-size: 1.8rem; margin-bottom: 15px;">
+                        <a href="{{ post.url }}" style="color: var(--text-light); transition: 0.3s;" onmouseover="this.style.color='var(--primary-cyan)'" onmouseout="this.style.color='var(--text-light)'">
+                            {{ post.title }}
+                        </a>
+                    </h2>
+                    
+                    <p style="color: var(--text-gray); line-height: 1.8; margin-bottom: 20px;">
+                        {{ post.excerpt | strip_html | truncatewords: 30 }}
+                    </p>
+                    
+                    <a href="{{ post.url }}" style="color: var(--primary-cyan); font-weight: bold; display: inline-flex; align-items: center; gap: 5px; transition: 0.3s;" onmouseover="this.style.color='var(--primary-purple)'" onmouseout="this.style.color='var(--primary-cyan)'">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        {% else %}
+        <!-- Empty state when no blog posts exist -->
+        <div style="text-align: center; padding: 60px 20px;">
+            <i class="fas fa-newspaper" style="font-size: 4rem; color: var(--primary-cyan); margin-bottom: 20px;"></i>
+            <h2 style="color: var(--text-light); margin-bottom: 15px;">Coming Soon!</h2>
+            <p style="color: var(--text-gray); max-width: 500px; margin: 0 auto;">
+                We're working on bringing you helpful automotive tips and insights. Check back soon for expert advice from Ralph!
+            </p>
+        </div>
+        {% endif %}
+
+    </div>
+</section>
+
+<!-- Categories sidebar could go here in future -->
+
+<section style="background: var(--bg-card); padding: 60px 0; margin-top: 60px;">
+    <div class="container" style="text-align: center;">
+        <h2 style="color: var(--primary-cyan); margin-bottom: 20px;">Need Automotive Service?</h2>
+        <p style="color: var(--text-gray); margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Don't just read about car maintenance—let Ralph take care of your vehicle with expert service you can trust.
+        </p>
+        <a href="tel:3522769636" class="btn" style="font-size: 1.1rem; padding: 15px 40px;">
+            <i class="fas fa-phone"></i> Call (352) 276-9636
+        </a>
+    </div>
+</section>
