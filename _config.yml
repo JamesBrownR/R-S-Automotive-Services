@@ -3,7 +3,7 @@ markdown: kramdown
 permalink: pretty
 permalink: /:year/:month/:day/:title/
 
-baseurl: "R-S-Automotive-Services"
+baseurl: ""
 future: false #hides future blogs
 # Enable Liquid processing in markdown files
 kramdown:
