@@ -49,7 +49,7 @@ layout: default
                         {{ post.excerpt | strip_html | truncatewords: 30 }}
                     </p>
                     
-                    <a href="{{ post.url }}" style="color: var(--primary-cyan); font-weight: bold; display: inline-flex; align-items: center; gap: 5px; transition: 0.3s;" onmouseover="this.style.color='var(--primary-purple)'" onmouseout="this.style.color='var(--primary-cyan)'">
+                    <a href="{{ site.baseurl }}/{{ post.url }}" style="color: var(--primary-cyan); font-weight: bold; display: inline-flex; align-items: center; gap: 5px; transition: 0.3s;" onmouseover="this.style.color='var(--primary-purple)'" onmouseout="this.style.color='var(--primary-cyan)'">
                         Read More <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
